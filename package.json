@@ -1,0 +1,23 @@
+{
+  "name": "service_manager_bem_scss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass_watch": "sass --watch scss/style.scss style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/savageblossom/service_manager_bem_scss.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/savageblossom/service_manager_bem_scss/issues"
+  },
+  "homepage": "https://github.com/savageblossom/service_manager_bem_scss#readme",
+  "dependencies": {
+    "sass": "^1.26.9",
+    "scss": "^0.2.4"
+  }
+}
