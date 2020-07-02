@@ -383,7 +383,7 @@ a {
   src: url("assets/fonts/Raleway-ExtraBold.ttf");
 }
 .header {
-  background-color: #17e2c3;
+  background: url("assets/img/header__background.jpg") no-repeat center;
   box-sizing: border-box;
   padding-top: 50px;
   height: 750px;
@@ -397,6 +397,8 @@ a {
   display: flex;
   justify-content: space-between;
   width: 445px;
+  position: relative;
+  right: 50px;
 }
 .header__links_item {
   color: #ffffff;
@@ -422,8 +424,10 @@ a {
   border-color: #061e37;
 }
 .header__buy_now {
-  margin-top: 165px;
+  margin-top: 154px;
   color: #ffffff;
+  display: flex;
+  justify-content: space-between;
 }
 .header__big_text {
   font-size: 55px;
@@ -435,7 +439,84 @@ a {
   font-size: 18px;
   font-family: RalewayRegular;
   line-height: 2;
+  margin-top: 5px;
 }
+.header__btns_container {
+  margin-top: 29px;
+}
+.header__btn_buy_now {
+  color: #ffffff;
+  font-family: RalewayBold;
+  font-size: 15px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  background-color: #061e37;
+  width: 150px;
+  height: 55px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+  padding: 0;
+  margin-right: 30px;
+}
+.header__btn_buy_now:hover {
+  background: #ffffff;
+  color: #061e37;
+}
+.header__btn_try {
+  color: #061e37;
+  font-family: RalewayBold;
+  font-size: 15px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff;
+  width: 160px;
+  height: 55px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+  padding: 0;
+}
+.header__btn_try:hover {
+  background: #061e37;
+  color: #ffffff;
+}
+.header__video_container {
+  width: 600px;
+  height: 320px;
+  border: 1px solid black;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3);
+  background: url(assets/img/video__background.png) no-repeat -1px -1px;
+  position: relative;
+  top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+.header__video_play_btn {
+  color: #ffffff;
+  font-size: 10px;
+  width: 60px;
+  height: 60px;
+  background: #061e37;
+  border: 1px solid #061e37;
+  border-radius: 5px;
+  padding: 0;
+}
+.header__video_container:hover .header__video_play_btn {
+  color: #061e37;
+  background: #ffffff;
+}
+.header__watch_text {
+  font-size: 12px;
+  font-family: RalewayBold;
+  color: #061e37;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
 .container {
   width: 1440px;
   margin: 0 auto;

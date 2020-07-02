@@ -1,5 +1,7 @@
+@use "__mixins" as mixins;
+
 .header {
-    background-color: #17e2c3;
+    background: url('assets/img/header__background.jpg') no-repeat center;
     box-sizing: border-box;
     padding-top: 50px;
     height: 750px;
@@ -15,13 +17,16 @@
         display: flex;
         justify-content: space-between;
         width: 445px;
+        position: relative;
+        right: 50px;
     }
     &__links_item {
         color: #ffffff;
         font-family: RalewayBold;
         font-size: 15px;
+        &:hover { color: #061e37 }
     }
-    &__links_item:hover { color: #061e37 }
+    
     &__sign_up_btn {
         width: 80px;
         height: 25px;
@@ -34,17 +39,19 @@
         color: #ffffff;
         text-transform: lowercase;
         
-    }
-    &__sign_up_btn:hover {
-        color: #061e37;
-        border-color: #061e37;
+        &:hover {
+            color: #061e37;
+            border-color: #061e37;
+        }
     }
 
     // нижняя часть header'a
 
     &__buy_now {
-        margin-top: 165px;
+        margin-top: 154px;
         color: #ffffff;
+        display: flex;
+        justify-content: space-between;
     }
     &__big_text {
         font-size: 55px;
@@ -56,8 +63,66 @@
         font-size: 18px;
         font-family: RalewayRegular;
         line-height: 2;
-    }
-    &__buy_now_btn {
 
+        margin-top: 5px;
+    }
+
+    &__btns_container {
+        margin-top: 29px;
+    }
+    &__btn_buy_now {
+        @include mixins.big_btn(#061e37, #ffffff);
+        margin-right: 30px;
+        &:hover {
+            background: #ffffff;
+            color: #061e37;
+        }
+    }
+    &__btn_try {
+        @include mixins.big_btn(#ffffff, #061e37, 160px);
+        &:hover {
+            background: #061e37;
+            color: #ffffff;
+        }
+    }
+
+    &__video_container {
+        width: 600px;
+        height: 320px;
+        border: 1px solid black;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3);
+        background: url(assets/img/video__background.png) no-repeat -1px -1px;
+        position: relative;
+        top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    &__video_play_btn {
+        color: #ffffff;
+        font-size: 10px;
+
+        width: 60px;
+        height: 60px;
+        background: #061e37;
+        border: 1px solid #061e37;
+        border-radius: 5px;
+        padding: 0;
+    }
+    &__video_container:hover &__video_play_btn {
+        color: #061e37;
+        background: #ffffff;
+    }
+    &__watch_text {
+        font-size: 12px;
+        font-family: RalewayBold;
+        color: #061e37;
+        text-transform: uppercase;
+        margin-top: 20px;
     }
 }
