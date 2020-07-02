@@ -1,0 +1,73 @@
+@use "__mixins" as mixins;
+.get_started {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 95px;
+    
+    // название, под-название и описание
+
+    &__top_container {
+        font-family: RalewaySemiBold;
+    }
+    &__title {
+        font-size: 45px;
+        color: #061e37;
+    }
+    &__sub_title {
+        font-size: 25px;
+        color: #b0bec5;
+        line-height: 2;
+    }
+    &__caption {
+        font-family: RalewayRegular;
+        font-size: 15px;
+        color: #b0bec5;
+        line-height: 1.9;
+    }
+    
+    // карточки 
+    &__card_list {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+        margin-top: 83px;
+    }
+    &__card_item {
+        box-sizing: border-box;
+        padding: 5px 5px 0 5px;
+    }
+    &__card_item--lifted {
+        position: relative;
+        bottom: 5px;
+    }
+    &__card_item--lifted &__card_heading {
+        margin-top: 38px;
+    }
+    &__card_heading {
+        margin-top: 42px;
+        font-size: 20px;
+        font-family: RalewaySemiBold;
+        color: #061e37;
+    }
+    &__card_text {
+        margin-top: 14px;
+        font-size: 15px;
+        color: #b0bec5;
+        font-family: RalewayRegular;
+        line-height: 20px;
+    }
+    // кнопка "GET STARTED"
+    &__btn {
+        @include mixins.big_btn(#1de9b6, #ffffff);
+        margin-top: 70px;
+        &:hover {
+            background-color: #061e37;
+        }
+    }
+    
+}

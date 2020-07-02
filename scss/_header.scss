@@ -5,8 +5,10 @@
     box-sizing: border-box;
     padding-top: 50px;
     height: 750px;
-
+    
+    // ----------------------
     // верхняя часть header'a
+    //       ⬇⬇⬇
 
     &__top_panel {
         display: flex;
@@ -45,7 +47,9 @@
         }
     }
 
+    // ---------------------
     // нижняя часть header'a
+    //       ⬇⬇⬇
 
     &__buy_now {
         margin-top: 154px;
@@ -85,6 +89,10 @@
             color: #ffffff;
         }
     }
+
+    // ------------
+    // видео справа
+    //    ⬇⬇⬇
 
     &__video_container {
         width: 600px;
