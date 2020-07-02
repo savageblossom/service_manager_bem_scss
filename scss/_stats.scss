@@ -1,0 +1,56 @@
+.stats {
+    width: 1600px;
+    margin: 0 auto;
+    font-family: RalewayExtraBold ;
+    font-size: 20px;
+    line-height: 25px;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        height: 150px;
+        
+    }
+    &__item {
+        width: 400px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__item_icon {
+        width: 60px;
+        height: 60px;
+        background-color: #fff; 
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__item_text {
+        width: 120px;
+        margin-left: 20px;
+        color: #fff;
+    }
+
+
+    &__item--business { 
+        background-color: #80d8ff; 
+        color: #80d8ff; 
+    
+    }
+    &__item--downloads { 
+        background-color: #82b1ff; 
+        color: #82b1ff; 
+    }
+    &__item--installs { 
+        background-color: #b388ff; 
+        color: #b388ff; 
+    }
+    &__item--users { 
+        background-color: #ea80fc;
+        color: #ea80fc;
+    }
+}
+
+

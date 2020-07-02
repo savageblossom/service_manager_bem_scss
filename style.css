@@ -528,7 +528,6 @@ a {
   flex-direction: column;
   text-align: center;
   box-sizing: border-box;
-  padding-top: 95px;
 }
 .get_started__top_container {
   font-family: RalewaySemiBold;
@@ -536,28 +535,27 @@ a {
 .get_started__title {
   font-size: 45px;
   color: #061e37;
+  margin-top: 95px;
 }
 .get_started__sub_title {
-  font-size: 25px;
   color: #b0bec5;
-  line-height: 2;
+  font: 25px/53px RalewaySemiBold;
 }
 .get_started__caption {
-  font-family: RalewayRegular;
-  font-size: 15px;
+  font: 15px/25px RalewayRegular;
   color: #b0bec5;
-  line-height: 1.9;
+  margin-top: 1px;
 }
 .get_started__card_list {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   width: 100%;
-  margin-top: 83px;
+  margin-top: 90px;
 }
 .get_started__card_item {
   box-sizing: border-box;
-  padding: 5px 5px 0 5px;
+  padding: 5px 3px 0 4px;
 }
 .get_started__card_item--lifted {
   position: relative;
@@ -592,9 +590,60 @@ a {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
   padding: 0;
   margin-top: 70px;
+  margin-bottom: 100px;
 }
 .get_started__btn:hover {
   background-color: #061e37;
+}
+
+.stats {
+  width: 1600px;
+  margin: 0 auto;
+  font-family: RalewayExtraBold;
+  font-size: 20px;
+  line-height: 25px;
+}
+.stats__list {
+  display: flex;
+  align-items: center;
+  height: 150px;
+}
+.stats__item {
+  width: 400px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stats__item_icon {
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stats__item_text {
+  width: 120px;
+  margin-left: 20px;
+  color: #fff;
+}
+.stats__item--business {
+  background-color: #80d8ff;
+  color: #80d8ff;
+}
+.stats__item--downloads {
+  background-color: #82b1ff;
+  color: #82b1ff;
+}
+.stats__item--installs {
+  background-color: #b388ff;
+  color: #b388ff;
+}
+.stats__item--users {
+  background-color: #ea80fc;
+  color: #ea80fc;
 }
 
 .container {
