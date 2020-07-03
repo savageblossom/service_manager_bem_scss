@@ -1,6 +1,8 @@
 // Ресет всех дефолтных стилей
 @import 'reset';
 
+@import 'bootstrap';
+
 // Импорт шрифтов
 @import 'fonts';
 
@@ -12,10 +14,15 @@
 @import '_get_started';
 @import '_stats';
 @import '_services';
-
+@import '_reviews';
+@import '_our_team';
+@import '_contact_us';
+@import '_footer';
 
 // Глобальные классы
 .container {
     width: 1440px;
     margin: 0 auto;
 }
+
+

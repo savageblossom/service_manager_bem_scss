@@ -1,7 +1,64 @@
 .services {
     @include flex_center;
-    
+    box-sizing: content-box;
+    padding-bottom: 84px;
+
     &__title {
         @include heading;
+        margin-top: 95px;
+    }
+    &__caption {
+        font-size: 15px;
+        line-height: 25px;
+        font-family: RalewayRegular;
+        color: #b0bec5;
+        margin-top: 16px;
+    }
+
+    &__accordion {
+        width: 800px;
+        margin-top: 42px;
+    }
+
+    &__card {
+        cursor: pointer;
+        margin-bottom: 14px;
+        box-shadow: 0 4px 8px 0 rgba($color: #000000, $alpha: 0.1);
+        border-radius: 5px;
+    }
+
+    &__card_clickable {
+        height: 51px;
+        color: #061e37;
+        font-size: 15px;
+        font-family: RalewayBold;
+        text-transform: uppercase;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 5px;
+    }
+    &__accordion_icon { margin-left: 26px; }
+    &__accordio_collapse-icon { 
+        margin-left: auto;
+        margin-right: 25px;
+    }
+    &__accordion_caption { margin-left: 27px; }
+
+    &__card_body {
+        display: flex;
+        padding: 8px 25px 25px 25px;
+        text-align: left;
+    }
+    &__accordion_img {
+        flex-shrink: 0;
+    }
+    &__accordion_text {
+        font-size: 15px;
+        line-height: 25px;
+        font-family: RalewayRegular;
+        color: #061e37;     
+        margin-left: 25px;  
     }
 }
