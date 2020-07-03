@@ -1,15 +1,18 @@
 // Ресет всех дефолтных стилей
-@use 'reset';
-
-
+@import 'reset';
 
 // Импорт шрифтов
-@use 'fonts';
+@import 'fonts';
+
+// mixins
+@import "__mixins";
 
 // Основные стили всего лендинга
-@use '_header';
-@use '_get_started';
-@use '_stats';
+@import '_header';
+@import '_get_started';
+@import '_stats';
+@import '_services';
+
 
 // Глобальные классы
 .container {

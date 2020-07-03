@@ -1,0 +1,7 @@
+.services {
+    @include flex_center;
+    
+    &__title {
+        @include heading;
+    }
+}

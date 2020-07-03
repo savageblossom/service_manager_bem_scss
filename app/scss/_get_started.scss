@@ -1,11 +1,5 @@
-@use "__mixins" as mixins;
 .get_started {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    box-sizing: border-box;
+    @include flex_center;
     
     // название, под-название и описание
 
@@ -13,8 +7,7 @@
         font-family: RalewaySemiBold;
     }
     &__title {
-        font-size: 45px;
-        color: #061e37;
+        @include heading;
         margin-top: 95px;
     }
     &__sub_title {
@@ -55,13 +48,13 @@
     &__card_text {
         margin-top: 14px;
         font-size: 15px;
-        color: #b0bec5;
+        color: #78909c;
         font-family: RalewayRegular;
         line-height: 20px;
     }
     // кнопка "GET STARTED"
     &__btn {
-        @include mixins.big_btn(#1de9b6, #ffffff);
+        @include big_btn(#1de9b6, #ffffff);
         margin-top: 70px;
         margin-bottom: 100px;
         &:hover {

@@ -1,0 +1,29 @@
+@mixin flex_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+@mixin big_btn($background, $color, $width: 150px) {
+    color: $color;
+    font-family: RalewayBold;
+    font-size: 15px;
+    text-transform: uppercase;
+
+    background-color: $background;
+    width: $width;
+    border: none;
+    border-radius: 5px;
+    height: 55px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+    padding: 0;
+}
+
+@mixin heading($color: #061e37) {
+    color: $color;
+    font-family: RalewaySemiBold;
+    font-size: 45px;
+}
