@@ -890,32 +890,32 @@ tbody.collapse.in {
     color: #061e37;
     margin-left: 25px; }
 
-.reviews {
+.testimonials {
   background: url("img/header__background.jpg") no-repeat center; }
-  .reviews .container {
+  .testimonials .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     height: 565px; }
-  .reviews__left_container {
+  .testimonials__left_container {
     width: 600px;
     height: 400px; }
-  .reviews__text_container {
+  .testimonials__text_container {
     color: #fff;
     font-family: RalewaySemiBold;
     margin-top: 124px;
     display: inline-block; }
-  .reviews__title {
+  .testimonials__title {
     font-size: 45px;
     line-height: 54px; }
-  .reviews__caption {
+  .testimonials__caption {
     font-size: 15px;
     line-height: 25px;
     margin-top: 12px; }
-  .reviews__btn_container {
+  .testimonials__btn_container {
     margin-top: 74px;
     display: inline-block; }
-  .reviews__get_started {
+  .testimonials__get_started {
     color: #fff;
     font-family: RalewayBold;
     font-size: 15px;
@@ -927,37 +927,37 @@ tbody.collapse.in {
     height: 55px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
     padding: 0; }
-    .reviews__get_started:hover {
+    .testimonials__get_started:hover {
       background: #fff;
       color: #061e37; }
-  .reviews__carousel {
+  .testimonials__carousel {
     width: 760px;
     height: 100%;
     overflow: hidden; }
-    .reviews__carousel_list {
+    .testimonials__carousel_list {
       height: 414px;
       margin-top: 86px; }
-    .reviews__carousel_item {
+    .testimonials__carousel_item {
       height: 100%; }
-    .reviews__carousel_flex_container {
+    .testimonials__carousel_flex_container {
       display: flex;
       height: 100%;
       justify-content: space-around;
       flex-direction: column; }
-    .reviews__carousel_card {
+    .testimonials__carousel_card {
       height: 160px;
       display: flex;
       justify-content: space-between; }
-    .reviews__carousel_card:nth-child(1) {
+    .testimonials__carousel_card:nth-child(1) {
       position: relative;
       bottom: 22px; }
-    .reviews__carousel_portrait {
+    .testimonials__carousel_portrait {
       width: 60px;
       height: 60px;
       border-radius: 50px;
       overflow: hidden;
       margin-top: 49px; }
-    .reviews__carousel_text-field {
+    .testimonials__carousel_text-field {
       height: 100%;
       width: 650px;
       box-sizing: border-box;
@@ -965,26 +965,26 @@ tbody.collapse.in {
       border-radius: 6px;
       padding: 30px;
       box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.2); }
-      .reviews__carousel_text-field h1 {
+      .testimonials__carousel_text-field h1 {
         font-size: 18px;
         color: #061e37;
         font-family: RalewayBold; }
-      .reviews__carousel_text-field p {
+      .testimonials__carousel_text-field p {
         font-size: 15px;
         color: #78909c;
         font-family: RalewayItalic;
         line-height: 25px;
         margin-top: 11px; }
-    .reviews__carousel_control {
+    .testimonials__carousel_control {
       font-size: 30px;
       color: #fff;
       position: absolute;
       left: 426px; }
-      .reviews__carousel_control:hover {
+      .testimonials__carousel_control:hover {
         color: #061e37; }
-      .reviews__carousel_control--prev {
+      .testimonials__carousel_control--prev {
         bottom: 32px; }
-      .reviews__carousel_control--next {
+      .testimonials__carousel_control--next {
         top: 32px; }
 
 .container {
