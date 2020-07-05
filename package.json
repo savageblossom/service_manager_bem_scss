@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass_watch": "sass --watch scss/style.scss style.css"
+    "sass_watch": "npx gulp watch"
   },
   "repository": {
     "type": "git",

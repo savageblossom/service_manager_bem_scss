@@ -36,5 +36,4 @@ const watch = () => {
     gulp.watch(['app/**.html', 'scss/**.scss'], reload)
 }
 
-exports.style = style;
 exports.watch = watch;

@@ -1,14 +1,22 @@
 .reviews {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
     background: url('img/header__background.jpg') no-repeat center;
-    height: 565px;
+
+    & .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: 565px;
+    }
+
+    &__left_container {
+        width: 600px;
+        height: 400px;
+    }
     &__text_container {
         color: #fff;
         font-family: RalewaySemiBold;
         margin-top: 124px;
+        display: inline-block;
     }
     &__title {
         font-size: 45px;
@@ -21,6 +29,7 @@
     }
     &__btn_container {
         margin-top: 74px;
+        display: inline-block;
     }
     &__get_started {
         @include big_btn(#061e37, #fff);
@@ -28,5 +37,85 @@
             background: #fff;
             color: #061e37;
         }
+    }
+
+    // Карусель
+    &__carousel {
+        width: 760px;
+        height: 100%;
+        overflow: hidden;
+
+        &_list {
+            height: 414px;
+            margin-top: 86px;
+        }
+
+
+        // Слайд карусели 
+        &_item {
+            height: 100%;
+        }
+        &_flex_container {
+            display: flex;
+            height: 100%;
+            justify-content: space-around;
+            flex-direction: column;
+        }
+
+        &_card {
+            height: 160px;
+            display: flex;
+            justify-content: space-between;
+        }
+        &_card:nth-child(1) {
+            position: relative;
+            bottom: 22px;
+        }
+        &_portrait {
+            width: 60px;
+            height: 60px;
+            border-radius: 50px;
+            overflow: hidden;
+            margin-top: 49px;
+        }
+        &_text-field {
+            height: 100%;
+            width: 650px;
+            box-sizing: border-box;
+            background: #fff;
+            border-radius: 6px;
+            padding: 30px;
+            box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.2);
+            & h1 {
+                font-size: 18px;
+                color: #061e37;
+                font-family: RalewayBold;
+            }
+            & p {
+                font-size: 15px;
+                color: #78909c;
+                font-family: RalewayItalic;
+                line-height: 25px;
+                margin-top: 11px;
+            }
+        }
+
+        // Кнопки управления каруселью
+        &_control {
+            font-size: 30px;
+            color: #fff;
+            position: absolute;
+            left: 426px;
+            &:hover {
+                color: #061e37;
+            }
+            &--prev {
+                bottom: 32px;
+            }
+            &--next {
+                top: 32px;
+            }
+        }
+
     }
 }
