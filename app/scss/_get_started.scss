@@ -6,9 +6,8 @@
     &__top_container {
         font-family: RalewaySemiBold;
     }
-    &__title {
-        @include heading;
-        margin-top: 95px;
+    &__heading {
+        @include heading(95px);
     }
     &__sub_title {
         color: #b0bec5;

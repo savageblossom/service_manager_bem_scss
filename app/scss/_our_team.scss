@@ -1,0 +1,56 @@
+.our_team {
+    @include flex_center;
+    padding-bottom: 88px;
+
+    &__heading {
+        @include heading(94px);
+    }
+    &__caption {
+        color: #90a4ae;
+        font-family: RalewayRegular;
+        font-size: 15px;
+        line-height: 25px;
+        width: 600px;
+        margin-top: 15px;
+    }
+    // Информация о личности
+    &__member {
+        &_list { 
+            //
+        }
+        &_item {
+            margin: 63px 0 0 19px;
+        }
+        &_portrait {
+            //
+        }
+
+        &_text-block {
+            margin-top: 26px;
+            width: 665px;
+        }
+        &_name {
+            font-size: 18px;
+            font-family: RalewayBold;
+            color: #061e37;
+        }
+        &_info {
+            font-size: 15px;
+            line-height: 25px;
+            font-family: RalewayRegular;
+            color: #90a4ae;
+            margin: 15px 19px 0 0;
+        }
+        &_socials {
+            margin-top: 26px;
+            font-size: 19px;
+            & a {
+                color: #90a4ae;
+                margin-right: 21px;
+                &:hover {
+                    color: #061e37;
+                }
+            }
+        }
+    }
+}

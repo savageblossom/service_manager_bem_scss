@@ -1,0 +1,73 @@
+.footer {
+    background: #061e37;
+    height: 300px;
+    padding-top: 96px;
+    box-sizing: border-box;
+    color: #fff;
+
+    &__bottom_panel {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__links {
+        &_panel {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+        &_main_list {
+            display: flex;
+            justify-content: space-between;
+            width: 445px;
+        }
+        &_item {
+            color: #fff;
+            font-family: RalewayBold;
+            font-size: 15px;
+            &:hover { color: #384b5f }
+        }
+
+        // Вторичный список ссылок (privacy police, about us, ...)
+        &_secondary_list {
+            display: flex;
+            &_container { display: inline-block; }
+            & span {
+                font-size: 5px;
+                position: relative;
+                bottom: 3px;
+            }
+            & li {
+                margin-right: 20px;
+            }
+        }
+        &_secondary_list &_item{
+            font-family: RalewayRegular;
+        }
+
+        // Ссылки на социальные сети
+        &_socials {
+            display: flex;
+
+            & a {
+                margin-left: 22px;
+                font-size: 19px;
+                color: #384b5f;
+                &:hover {
+                    color: #fff;
+                }
+            }
+            
+            &_container {
+                display: inline-block;
+            }
+            
+            
+        }
+    }
+
+    &__links_panel {
+        color: #fff;
+    }
+}

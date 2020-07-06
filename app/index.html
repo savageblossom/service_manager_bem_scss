@@ -46,7 +46,7 @@
 
     <section class="get_started container">
         <div class="get_started__top_container">
-            <h1 class="get_started__title">
+            <h1 class="get_started__heading">
                 Easy & Useful
             </h1>
             <h2 class="get_started__sub_title">
@@ -140,7 +140,7 @@
     </section>
 
     <section class="services container">
-        <h1 class="services__title">Services</h1>
+        <h1 class="services__heading">Services</h1>
         <p class="services__caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor<br>
              incididunt ut labore et dheaolore magna</p>
 
@@ -334,7 +334,6 @@
                         </div>
                     </li>
                 </ul>
-
                 <a class="testimonials__carousel_control testimonials__carousel_control--prev" href="#myCarousel" data-slide="prev"><i class="fas fa-angle-down"></i></a>
                 <a class="testimonials__carousel_control testimonials__carousel_control--next" href="#myCarousel" data-slide="next"><i class="fas fa-angle-up"></i></a>
             </div>
@@ -342,8 +341,117 @@
     </section>
 
 
+    <section class="our_team container">
+        <h1 class="our_team__heading">Our Team</h1>
+        <p class="our_team__caption">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+        </p>
+        <ul class="our_team__member_list">
+            <li class="our_team__member_item">
+                <div class="our_team__member_portrait">
+                    <img src="img/our_team__portraits.png" alt="">
+                </div>
+                <div class="our_team__member_text-block">
+                    <h1 class="our_team__member_name">Sophie Turner</h1>
+                    <p class="our_team__member_info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magnaLorem ipsum dolor sit amet, 
+                        consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+                </div>
+                <div class="our_team__member_socials">
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#"><i class="fab fa-steam"></i></a>
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+
+    <section class="contact_us">
+        <div class="container">
+            <h1 class="contact_us__heading">Contact Us</h1>
+            <p class="contact_us__caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+            <form id="contactForm" class="contact_us__form" action="#">
+                <input type="text" class="contact_us__form_input" id="firstName" name="firstName" placeholder="First Name">
+                <input type="text" class="contact_us__form_input" id="lastName"  name="lastName"  placeholder="Last Name">
+                <input type="text" class="contact_us__form_input" id="email"     name="email"     placeholder="Email">
+                <input type="text" class="contact_us__form_input" id="tel"       name="phone"     placeholder="Phone">
+                <textarea class="contact_us__form_input contact_us__form_input--textarea" name="message" cols="30" rows="10" placeholder="Message"></textarea>
+                <div class="contact_us__form_checkbox_container">
+                    <input class="contact_us__form_checkbox" type="checkbox" id="newsletter" name="newsletter" value="newsletter">
+                    <label for="newsletter">subscribe to the newsletter</label>
+                </div>
+                <input class="contact_us__form_submit" type="submit" value="Send">
+            </form>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__bottom_panel">
+                <a class="footer__logo" href="">
+                    <img src="img/header__logo.png" alt="" width="180" height="30" >
+                </a>
+                <ul class="footer__links_main_list">
+                    <li><a class="footer__links_item" href="#">Home</a></li>
+                    <li><a class="footer__links_item" href="#">Service</a></li>
+                    <li><a class="footer__links_item" href="#">Extension</a></li>
+                    <li><a class="footer__links_item" href="#">Pricing</a></li>
+                    <li><a class="footer__links_item" href="#">Help</a></li>
+                </ul>
+            </div>
+            <div class="footer__links_panel">
+                <div class="footer__links_secondary_list_container">
+                    <ul class="footer__links_secondary_list">
+                        <li><a class="footer__links_item" href="#">Privacy Policy</a></li>
+                        <li><span><i class="fas fa-circle"></i></span></li>
+                        <li><a class="footer__links_item" href="#">About us</a></li>
+                        <li><span><i class="fas fa-circle"></i></span></li>
+                        <li><a class="footer__links_item" href="#">About us</a></li>
+                    </ul>
+                </div>
+                <div class="footer__links_socials_container">
+                    <ul class="footer__links_socials">
+                        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+
 
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="js/jquery-input-mask-phone-number.min.js"></script>
+    <script>
+        $('#contactForm').on('submit', () => {
+
+            event.preventDefault();
+        })
+        
+        $("#tel").inputmask({"mask": "9 (999) 999-99-99"});
+        $("#email").inputmask({
+                mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
+                greedy: false,
+            onBeforePaste: function (pastedValue, opts) {
+                pastedValue = pastedValue.toLowerCase();
+                return pastedValue.replace("mailto:", "");
+            },
+            definitions: {
+                '*': {
+                    validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~\-]",
+                    casing: "lower"
+                }
+            }
+        });
+    </script>
 </body>
 </html>

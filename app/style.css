@@ -611,6 +611,10 @@ tbody.collapse.in {
   font-family: RalewayItalic;
   src: url("fonts/Raleway-Italic.ttf"); }
 
+@font-face {
+  font-family: RalewayMedium;
+  src: url("fonts/Raleway-Medium.ttf"); }
+
 .header {
   background: url("img/header__background.jpg") no-repeat center;
   box-sizing: border-box;
@@ -736,7 +740,7 @@ tbody.collapse.in {
   box-sizing: border-box; }
   .get_started__top_container {
     font-family: RalewaySemiBold; }
-  .get_started__title {
+  .get_started__heading {
     color: #061e37;
     font-family: RalewaySemiBold;
     font-size: 45px;
@@ -840,7 +844,7 @@ tbody.collapse.in {
   box-sizing: border-box;
   box-sizing: content-box;
   padding-bottom: 84px; }
-  .services__title {
+  .services__heading {
     color: #061e37;
     font-family: RalewaySemiBold;
     font-size: 45px;
@@ -986,6 +990,205 @@ tbody.collapse.in {
         bottom: 32px; }
       .testimonials__carousel_control--next {
         top: 32px; }
+
+.our_team {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  box-sizing: border-box;
+  padding-bottom: 88px; }
+  .our_team__heading {
+    color: #061e37;
+    font-family: RalewaySemiBold;
+    font-size: 45px;
+    margin-top: 94px; }
+  .our_team__caption {
+    color: #90a4ae;
+    font-family: RalewayRegular;
+    font-size: 15px;
+    line-height: 25px;
+    width: 600px;
+    margin-top: 15px; }
+  .our_team__member_item {
+    margin: 63px 0 0 19px; }
+  .our_team__member_text-block {
+    margin-top: 26px;
+    width: 665px; }
+  .our_team__member_name {
+    font-size: 18px;
+    font-family: RalewayBold;
+    color: #061e37; }
+  .our_team__member_info {
+    font-size: 15px;
+    line-height: 25px;
+    font-family: RalewayRegular;
+    color: #90a4ae;
+    margin: 15px 19px 0 0; }
+  .our_team__member_socials {
+    margin-top: 26px;
+    font-size: 19px; }
+    .our_team__member_socials a {
+      color: #90a4ae;
+      margin-right: 21px; }
+      .our_team__member_socials a:hover {
+        color: #061e37; }
+
+.contact_us {
+  background: #fafafa;
+  width: 1600px;
+  margin: 0 auto;
+  padding-bottom: 100px; }
+  .contact_us .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    box-sizing: border-box;
+    width: 600px; }
+  .contact_us__heading {
+    color: #061e37;
+    font-family: RalewaySemiBold;
+    font-size: 45px;
+    margin-top: 44px; }
+  .contact_us__caption {
+    font-family: RalewayRegular;
+    font-size: 15px;
+    line-height: 25px;
+    color: #061e37;
+    margin-top: 16px; }
+  .contact_us__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 45px;
+    color: #061e37;
+    font-size: 14px; }
+    .contact_us__form_submit {
+      color: #fff;
+      font-family: RalewayBold;
+      font-size: 15px;
+      text-transform: uppercase;
+      background-color: #1de9b6;
+      width: 150px;
+      border: none;
+      border-radius: 5px;
+      height: 55px;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+      padding: 0;
+      font-family: RalewayMedium;
+      font-size: 16px;
+      width: 130px;
+      height: 50px;
+      margin-top: 20px; }
+      .contact_us__form_submit:hover {
+        background-color: #061e37; }
+    .contact_us__form_checkbox {
+      position: absolute;
+      opacity: 0; }
+      .contact_us__form_checkbox_container {
+        margin-top: 37px; }
+      .contact_us__form_checkbox + label {
+        position: relative;
+        cursor: pointer;
+        padding: 0;
+        font-size: 15px;
+        color: #061e37;
+        font-family: RalewayMedium; }
+      .contact_us__form_checkbox + label:before {
+        content: '';
+        margin-right: 10px;
+        display: inline-block;
+        vertical-align: text-top;
+        width: 16px;
+        height: 16px;
+        background: url("img/form__checkbox_square.png"); }
+      .contact_us__form_checkbox:focus + label:before {
+        box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12); }
+      .contact_us__form_checkbox:checked + label:after {
+        content: '';
+        position: absolute;
+        left: 3px;
+        top: 7px;
+        background: black;
+        width: 2px;
+        height: 2px;
+        box-shadow: 2px 0 0 black, 4px 0 0 black, 4px -2px 0 black, 4px -4px 0 black, 4px -6px 0 black, 4px -8px 0 black;
+        transform: rotate(45deg); }
+    .contact_us__form_input {
+      width: 280px;
+      height: 50px;
+      border: 1px solid #061e37;
+      border-radius: 5px;
+      font-family: RalewayMedium;
+      padding-left: 18px;
+      box-sizing: border-box;
+      margin-top: 20px; }
+      .contact_us__form_input--textarea {
+        width: 100%;
+        height: 150px;
+        resize: none;
+        padding: 16px 18px; }
+      .contact_us__form_input::placeholder {
+        color: #061e37;
+        opacity: 1; }
+      .contact_us__form_input:nth-child(-n + 2) {
+        margin: 0; }
+      .contact_us__form_input:-ms-input-placeholder {
+        color: #061e37; }
+      .contact_us__form_input::-ms-input-placeholder {
+        color: #061e37; }
+
+.footer {
+  background: #061e37;
+  height: 300px;
+  padding-top: 96px;
+  box-sizing: border-box;
+  color: #fff; }
+  .footer__bottom_panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .footer__links_panel {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between; }
+  .footer__links_main_list {
+    display: flex;
+    justify-content: space-between;
+    width: 445px; }
+  .footer__links_item {
+    color: #fff;
+    font-family: RalewayBold;
+    font-size: 15px; }
+    .footer__links_item:hover {
+      color: #384b5f; }
+  .footer__links_secondary_list {
+    display: flex; }
+    .footer__links_secondary_list_container {
+      display: inline-block; }
+    .footer__links_secondary_list span {
+      font-size: 5px;
+      position: relative;
+      bottom: 3px; }
+    .footer__links_secondary_list li {
+      margin-right: 20px; }
+  .footer__links_secondary_list .footer__links_item {
+    font-family: RalewayRegular; }
+  .footer__links_socials {
+    display: flex; }
+    .footer__links_socials a {
+      margin-left: 22px;
+      font-size: 19px;
+      color: #384b5f; }
+      .footer__links_socials a:hover {
+        color: #fff; }
+    .footer__links_socials_container {
+      display: inline-block; }
+  .footer__links_panel {
+    color: #fff; }
 
 .container {
   width: 1440px;

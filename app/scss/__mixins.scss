@@ -22,8 +22,9 @@
     padding: 0;
 }
 
-@mixin heading($color: #061e37) {
+@mixin heading($margin-top: 100px, $color: #061e37) {
     color: $color;
     font-family: RalewaySemiBold;
     font-size: 45px;
+    margin-top: $margin-top;
 }

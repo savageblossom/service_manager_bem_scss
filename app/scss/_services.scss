@@ -3,9 +3,8 @@
     box-sizing: content-box;
     padding-bottom: 84px;
 
-    &__title {
-        @include heading;
-        margin-top: 95px;
+    &__heading {
+        @include heading(95px);
     }
     &__caption {
         font-size: 15px;
