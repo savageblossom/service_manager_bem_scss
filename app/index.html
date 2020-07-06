@@ -374,11 +374,22 @@
             <h1 class="contact_us__heading">Contact Us</h1>
             <p class="contact_us__caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
             <form id="contactForm" class="contact_us__form" action="#">
-                <input type="text" class="contact_us__form_input" id="firstName" name="firstName" placeholder="First Name">
-                <input type="text" class="contact_us__form_input" id="lastName"  name="lastName"  placeholder="Last Name">
-                <input type="text" class="contact_us__form_input" id="email"     name="email"     placeholder="Email">
-                <input type="text" class="contact_us__form_input" id="tel"       name="phone"     placeholder="Phone">
-                <textarea class="contact_us__form_input contact_us__form_input--textarea" name="message" cols="30" rows="10" placeholder="Message"></textarea>
+                <div class="contact_us__form_input_container">
+                    <input type="text" class="contact_us__form_input" id="firstName" name="firstName" placeholder="First Name">
+                </div>
+                <div class="contact_us__form_input_container">
+                    <input type="text" class="contact_us__form_input" id="lastName"  name="lastName"  placeholder="Last Name">
+                </div>
+                <div class="contact_us__form_input_container">
+                    <input type="text" class="contact_us__form_input" id="email"     name="email"     placeholder="Email">
+                </div>
+                <div class="contact_us__form_input_container">
+                    <input type="text" class="contact_us__form_input" id="tel"       name="phone"     placeholder="Phone">
+                </div>
+                <div class="contact_us__form_input_container contact_us__form_input_container--textarea">
+                    <textarea class="contact_us__form_input contact_us__form_input--textarea " 
+                    id="message" name="message" cols="30" rows="10" placeholder="Message"></textarea>
+                </div>
                 <div class="contact_us__form_checkbox_container">
                     <input class="contact_us__form_checkbox" type="checkbox" id="newsletter" name="newsletter" value="newsletter">
                     <label for="newsletter">subscribe to the newsletter</label>
@@ -432,11 +443,30 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="js/jquery-input-mask-phone-number.min.js"></script>
     <script>
-        $('#contactForm').on('submit', () => {
 
+        $('#contactForm').on('submit', () => {
+            // Выбор инпутов
+            const formInputList = $('#firstName, #lastName, #tel, #email, #message');
+
+            // Проверка свойства value у выбранных инпутов на заполненность
+            for(const [k, v] of Object.entries(formInputList)) {
+                let inputId = '#'+v.id;
+                if(v.value == '' || (inputId == '#tel' && v.value.includes('_'))) {
+                    if(!($(inputId).prev().hasClass('contact_us__error'))) {
+                        $(inputId).before($('<div class="contact_us__error">Please fill in the blank field</div>'))
+                    }
+                }
+                else {
+                    $(inputId).prev().remove()
+                }
+            }
+            
+            if($('.contact_us__error').length == 0) {
+                alert('Письмо отправлено успешно!')
+            }
             event.preventDefault();
         })
-        
+
         $("#tel").inputmask({"mask": "9 (999) 999-99-99"});
         $("#email").inputmask({
                 mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
