@@ -1,0 +1,51 @@
+@media screen and (max-width: 1440px) {
+    .container {
+        padding: 0 15px 0 15px;
+    }
+}
+
+
+@media screen and (max-width: 1216px) {
+    .stats {
+        height: 300px;
+        
+    }
+
+}
+
+
+
+//--------------------------------------<
+@media screen and (max-width: 860px) {
+    
+    .header {
+        &__nav {
+            &_burger {
+                // width: 14px;
+                // height: 19px;
+                display: block;
+            }
+            &_container {
+                justify-content: flex-end;
+            }
+        }
+        &__links_list {
+            display: none;
+        }
+        &__sign_up_btn {
+            display: none;
+        }
+    }
+}
+//--------------------------------------<
+
+
+@media screen and (max-width: 616px) {
+    .stats {
+        height: 600px;
+        &__item {
+            width: calc(100% - 15px)
+        }
+    }
+    
+}
