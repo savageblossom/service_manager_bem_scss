@@ -21,7 +21,7 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  transition: ease 0.3s; }
+  transition: all ease 0.3s; }
 
 body {
   overflow-x: hidden; }
@@ -622,7 +622,7 @@ tbody.collapse.in {
   background: url("img/header__background.jpg") no-repeat center;
   box-sizing: border-box;
   padding-top: 50px;
-  height: 750px; }
+  min-height: 750px; }
   .header__nav_burger {
     display: none;
     border: none;
@@ -652,6 +652,8 @@ tbody.collapse.in {
     font-size: 15px; }
     .header__links_item:hover {
       color: #061e37; }
+  .header__sign_up_link {
+    display: none; }
   .header__sign_up_btn {
     width: 80px;
     height: 25px;
@@ -666,10 +668,11 @@ tbody.collapse.in {
       color: #061e37;
       border-color: #061e37; }
   .header__buy_now {
-    margin-top: 154px;
+    margin-top: calc(100% - 1286px);
     color: #ffffff;
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    flex-wrap: wrap; }
   .header__big_text {
     font-size: 55px;
     font-family: RalewayExtraBold;
@@ -770,13 +773,15 @@ tbody.collapse.in {
     margin-top: 1px; }
   .get_started__card_list {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
-    flex-direction: row;
     width: 100%;
-    margin-top: 90px; }
+    margin-top: 70px; }
   .get_started__card_item {
     box-sizing: border-box;
-    padding: 5px 3px 0 4px; }
+    padding: 5px 3px 0 4px;
+    margin-top: 20px; }
   .get_started__card_item--lifted {
     position: relative;
     bottom: 5px; }
@@ -902,7 +907,7 @@ tbody.collapse.in {
     margin-left: auto;
     margin-right: 25px; }
   .services__accordion_caption {
-    margin-left: 27px; }
+    margin: 0 27px 0 27px; }
   .services__card_body {
     display: flex;
     padding: 8px 25px 25px 25px;
@@ -921,11 +926,15 @@ tbody.collapse.in {
   .testimonials .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    height: 565px; }
+    justify-content: space-around;
+    min-height: 515px;
+    padding-bottom: 50px;
+    box-sizing: border-box; }
   .testimonials__left_container {
     width: 600px;
-    height: 400px; }
+    min-height: 400px;
+    display: flex;
+    flex-direction: column; }
   .testimonials__text_container {
     color: #fff;
     font-family: RalewaySemiBold;
@@ -961,17 +970,19 @@ tbody.collapse.in {
     height: 100%;
     overflow: hidden; }
     .testimonials__carousel_list {
-      height: 414px;
-      margin-top: 86px; }
+      min-height: 414px;
+      margin-top: 86px;
+      padding-top: 20px; }
     .testimonials__carousel_item {
       height: 100%; }
     .testimonials__carousel_flex_container {
       display: flex;
       height: 100%;
       justify-content: space-around;
-      flex-direction: column; }
+      flex-direction: column;
+      margin-bottom: 100px; }
     .testimonials__carousel_card {
-      height: 160px;
+      min-height: 160px;
       display: flex;
       justify-content: space-between; }
     .testimonials__carousel_card:nth-child(1) {
@@ -1021,6 +1032,8 @@ tbody.collapse.in {
   text-align: center;
   box-sizing: border-box;
   padding-bottom: 88px; }
+  .our_team + container {
+    padding-bottom: 88px; }
   .our_team__heading {
     color: #061e37;
     font-family: RalewaySemiBold;
@@ -1031,25 +1044,30 @@ tbody.collapse.in {
     font-family: RalewayRegular;
     font-size: 15px;
     line-height: 25px;
-    width: 600px;
+    max-width: 600px;
     margin-top: 15px; }
+  .our_team__member_list {
+    max-width: 460px; }
   .our_team__member_item {
     margin: 63px 0 0 19px; }
+  .our_team__member_portrait img {
+    width: 100%; }
   .our_team__member_text-block {
     margin-top: 26px;
-    width: 665px; }
+    max-width: 665px; }
   .our_team__member_name {
     font-size: 18px;
     font-family: RalewayBold;
     color: #061e37; }
   .our_team__member_info {
+    max-width: 450px;
     font-size: 15px;
     line-height: 25px;
     font-family: RalewayRegular;
     color: #90a4ae;
-    margin: 15px 19px 0 0; }
+    margin-top: 15px; }
   .our_team__member_socials {
-    margin-top: 26px;
+    margin: 26px 0 26px 0;
     font-size: 19px; }
     .our_team__member_socials a {
       color: #90a4ae;
@@ -1069,7 +1087,7 @@ tbody.collapse.in {
     flex-direction: column;
     text-align: center;
     box-sizing: border-box;
-    width: 600px; }
+    max-width: 600px; }
   .contact_us__error {
     color: red;
     position: absolute;
@@ -1177,7 +1195,7 @@ tbody.collapse.in {
 
 .footer {
   background: #061e37;
-  height: 300px;
+  min-height: 300px;
   padding-top: 96px;
   box-sizing: border-box;
   color: #fff; }
@@ -1225,29 +1243,155 @@ tbody.collapse.in {
     color: #fff; }
 
 @media screen and (max-width: 1440px) {
+  .header, .testimonials {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#18e0c3+0,0bb4cb+100 */
+    background: #18e0c3;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #18e0c3 0%, #0bb4cb 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #18e0c3 0%, #0bb4cb 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #18e0c3 0%, #0bb4cb 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#18e0c3', endColorstr='#0bb4cb',GradientType=0 );
+    /* IE6-9 */ }
   .container {
-    padding: 0 15px 0 15px; } }
+    padding: 0 15px 0 15px; }
+  .header {
+    padding-bottom: 50px; }
+    .header__buy_now {
+      margin-top: 50px; }
+    .header__video_container {
+      margin-top: 10px; }
+  .get_started__heading {
+    margin-top: 50px; }
+  .get_started__card_list {
+    margin-top: 10px; }
+  .get_started__card_list {
+    justify-content: space-around; }
+  .get_started__btn {
+    margin: 50px 0 50px 0; }
+  .services__heading {
+    margin-top: 50px; } }
 
 @media screen and (max-width: 1216px) {
   .stats {
-    height: 300px; } }
+    height: 300px; }
+  .testimonials__text_container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column; }
+  .testimonials__left_container {
+    display: flex;
+    align-items: center; }
+  .testimonials__btn_container {
+    width: 150px; } }
 
 @media screen and (max-width: 860px) {
+  .header__top_panel {
+    flex-wrap: wrap; }
   .header__nav_burger {
-    display: block; }
+    width: 14px;
+    height: 19px;
+    display: inline-block; }
   .header__nav_container {
-    justify-content: flex-end; }
-  .header__links_list {
+    justify-content: center;
+    margin-top: 10px;
+    min-width: 100%;
     display: none; }
+  .header__links_list {
+    margin: 0;
+    flex-direction: column;
+    max-width: 100%;
+    text-align: center;
+    min-height: 150px; }
+  .header__links_item {
+    font-size: 16px; }
+  .header__sign_up_link {
+    display: inline; }
   .header__sign_up_btn {
-    display: none; } }
+    display: none; }
+  .header__buy_now {
+    margin-top: 50px;
+    justify-content: center; }
+  .header__text_container {
+    text-align: center; }
+  .services__accordion {
+    min-width: calc(100% - 60px);
+    width: 0; }
+  .services__card_body {
+    flex-wrap: wrap;
+    justify-content: center; }
+  .services__accordion_img {
+    margin: 15px 0 15px 0; }
+  .testimonials__carousel_control {
+    left: 378px; }
+    .testimonials__carousel_control:hover {
+      color: #061e37; }
+    .testimonials__carousel_control--prev {
+      bottom: 32px; }
+    .testimonials__carousel_control--next {
+      top: 32px; }
+  .testimonials__btn_container {
+    margin-top: 50px; } }
 
-@media screen and (max-width: 616px) {
+@media screen and (max-width: 767px) {
   .stats {
     height: 600px; }
     .stats__item {
-      width: calc(100% - 15px); } }
+      width: calc(100% - 15px); }
+  .testimonials__carousel_portrait {
+    display: none; }
+  .testimonials__carousel_text-field {
+    width: 100%; }
+  .testimonials__carousel_control {
+    left: 50%; }
+    .testimonials__carousel_control:hover {
+      color: #061e37; }
+    .testimonials__carousel_control--prev {
+      bottom: 32px; }
+    .testimonials__carousel_control--next {
+      top: 32px; }
+  .contact_us__form_input {
+    width: 100%; }
+    .contact_us__form_input_container {
+      width: 100%; }
+  .footer {
+    padding: 30px 0; }
+    .footer li {
+      margin-top: 10px; }
+    .footer__mobile_hidden {
+      display: none; }
+    .footer__links_panel {
+      margin: 0; }
+    .footer__links_main_list, .footer__links_secondary_list_container {
+      width: 0;
+      min-width: 100px;
+      justify-content: center; }
+    .footer__links_secondary_list li {
+      margin-right: 0; }
+    .footer__bottom_panel, .footer__links_panel, .footer__links_main_list, .footer__links_secondary_list {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+    .footer__links_socials {
+      justify-content: space-around; }
+      .footer__links_socials li a {
+        margin-left: 0; }
+      .footer__links_socials_container {
+        width: 250px; }
+    .footer .container {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap; } }
 
 .container {
   max-width: 1440px;
   margin: 0 auto; }
+
+.break {
+  flex-basis: 100%;
+  height: 0; }

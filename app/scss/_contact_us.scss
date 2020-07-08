@@ -6,7 +6,7 @@
 
     & .container {
         @include flex_center;
-        width: 600px;
+        max-width: 600px;
     }
     
     &__error {

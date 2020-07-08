@@ -1,14 +1,81 @@
 @media screen and (max-width: 1440px) {
+
+    // testimonials & header bg
+    .header, .testimonials {
+                /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#18e0c3+0,0bb4cb+100 */
+                background: #18e0c3; /* Old browsers */
+                background: -moz-linear-gradient(top,  #18e0c3 0%, #0bb4cb 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,  #18e0c3 0%,#0bb4cb 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom,  #18e0c3 0%,#0bb4cb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#18e0c3', endColorstr='#0bb4cb',GradientType=0 ); /* IE6-9 */
+    }
+
     .container {
         padding: 0 15px 0 15px;
     }
+    .header {
+                padding-bottom: 50px;
+                &__buy_now {
+                    margin-top: 50px;
+                }
+                &__video_container {
+                    margin-top: 10px;
+                }
+
+    }
+
+    .get_started {
+        &__heading {
+            margin-top: 50px;
+        }
+        &__card_list {
+            margin-top: 10px;
+        }
+        &__card_list {
+            justify-content: space-around;
+        }
+        // кнопка "GET STARTED"
+        &__btn {
+            margin: 50px 0 50px 0;
+        }
+    }
+
+
+    .services {
+        &__heading {
+            margin-top: 50px;
+        }
+        &__accordion {
+
+        }
+        // &__accordion {
+        //     min-width: calc(100% - 320px);
+        // }
+    }
+    
 }
 
 
 @media screen and (max-width: 1216px) {
     .stats {
         height: 300px;
-        
+    }
+    .testimonials {
+        &__text_container {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        &__left_container {
+            display: flex;
+            align-items: center;
+        }
+        &__btn_container {
+            width: 150px;
+        }
     }
 
 }
@@ -17,34 +84,166 @@
 
 //--------------------------------------<
 @media screen and (max-width: 860px) {
-    
     .header {
+
+        &__top_panel {
+            flex-wrap: wrap;
+        }
         &__nav {
             &_burger {
-                // width: 14px;
-                // height: 19px;
-                display: block;
+                width: 14px;
+                height: 19px;
+                display: inline-block;
             }
             &_container {
-                justify-content: flex-end;
+                justify-content: center;
+                margin-top: 10px;
+                min-width: 100%;
+                display: none;
             }
         }
         &__links_list {
-            display: none;
+            margin: 0;
+            flex-direction: column;
+            max-width: 100%;
+            text-align: center;
+            min-height: 150px;
+        }
+        &__links_item { font-size: 16px; }
+        &__sign_up_link {
+            display: inline;
         }
         &__sign_up_btn {
             display: none;
+        }
+        &__buy_now {
+            margin-top: 50px;
+            justify-content: center;
+        }
+        &__text_container {
+            text-align: center;
+        }
+        
+    }
+    .services {
+        &__accordion {
+            min-width: calc(100% - 60px);
+            width: 0;
+        }
+        &__card_body {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__accordion_img {
+            margin: 15px 0 15px 0;
+        }
+    }
+    .testimonials {
+        &__carousel {
+            &_control {
+                left: 378px;
+                &:hover {
+                    color: #061e37;
+                }
+                &--prev {
+                    bottom: 32px;
+                }
+                &--next {
+                    top: 32px;
+                }
+            }
+        }
+        &__btn_container {
+            margin-top: 50px;
         }
     }
 }
 //--------------------------------------<
 
 
-@media screen and (max-width: 616px) {
+@media screen and (max-width: 767px) {
     .stats {
         height: 600px;
         &__item {
             width: calc(100% - 15px)
+        }
+    }
+    .testimonials {
+        &__carousel {
+            &_portrait {
+                display: none;
+            }
+            &_text-field {
+                width: 100%;
+            }
+            &_control {
+                left: 50%;
+                &:hover {
+                    color: #061e37;
+                }
+                &--prev {
+                    bottom: 32px;
+                }
+                &--next {
+                    top: 32px;
+                }
+            }
+        }
+    }
+    .contact_us {
+        &__form_input {
+            width: 100%;
+            &_container {
+                width: 100%;
+            }
+        }
+    }
+
+    .footer {
+        padding: 30px 0;
+
+        & li {
+            margin-top: 10px;
+        }
+
+        &__mobile_hidden {
+            display: none;
+        }
+
+        &__links_panel {
+            margin: 0;
+        }
+        &__links_main_list, &__links_secondary_list_container {
+            width: 0;
+            min-width: 100px;
+            justify-content: center;
+        }
+        &__links_secondary_list {
+            & li {
+                margin-right: 0;
+            }
+        }
+
+        &__bottom_panel, &__links_panel, &__links_main_list, &__links_secondary_list {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        &__links_socials {
+            & li a{
+                margin-left: 0;
+            }
+            &_container {
+                width: 250px;
+            }
+            
+            justify-content: space-around;
+        }
+        & .container {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
         }
     }
     

@@ -1,8 +1,8 @@
 .header {
-    background: url('img/header__background.jpg') no-repeat center;
+    background: url('img/header__background.jpg') no-repeat center; 
     box-sizing: border-box;
     padding-top: 50px;
-    height: 750px;
+    min-height: 750px;
     
     // ----------------------
     // верхняя часть header'a
@@ -19,14 +19,13 @@
         font-size: 18px;
         &:hover {
             color: #061e37;
-        }
+    }
     }
     &__nav_container {
         display: flex;
         justify-content: space-between;
         align-items: center;
         min-width: calc(100% - 500px);
-        
     }
     &__top_panel {
         display: flex;
@@ -46,7 +45,7 @@
         font-size: 15px;
         &:hover { color: #061e37 }
     }
-    
+    &__sign_up_link { display: none; }
     &__sign_up_btn {
         width: 80px;
         height: 25px;
@@ -70,10 +69,11 @@
     //       ⬇⬇⬇
 
     &__buy_now {
-        margin-top: 154px;
+        margin-top: calc(100% - 1286px); // 154px
         color: #ffffff;
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
     &__big_text {
         font-size: 55px;

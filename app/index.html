@@ -14,16 +14,17 @@
                 <a class="header__logo" href="">
                     <img src="img/header__logo.png" alt="" width="180" height="30" >
                 </a>
-                <div class="header__nav_container">
-                    <button class="header__nav_burger">
-                        <i class="fas fa-bars"></i>
-                    </button>
+                <button id="header__toggle_menu" class="header__nav_burger">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div id="header__toggle_menu_target" class="header__nav_container">
                     <nav class="header__links_list">
                         <a class="header__links_item" href="#">Home</a>
                         <a class="header__links_item" href="#">Service</a>
                         <a class="header__links_item" href="#">Extension</a>
                         <a class="header__links_item" href="#">Pricing</a>
                         <a class="header__links_item" href="#">Help</a>
+                        <a class="header__links_item header__sign_up_link" href="#">Sign Up</a>
                     </nav>
                     <button class="header__sign_up_btn">Sign up</button>
                 </div>
@@ -422,9 +423,9 @@
                 <div class="footer__links_secondary_list_container">
                     <ul class="footer__links_secondary_list">
                         <li><a class="footer__links_item" href="#">Privacy Policy</a></li>
-                        <li><span><i class="fas fa-circle"></i></span></li>
+                        <li class="footer__mobile_hidden"><span><i class="fas fa-circle"></i></span></li>
                         <li><a class="footer__links_item" href="#">About us</a></li>
-                        <li><span><i class="fas fa-circle"></i></span></li>
+                        <li class="footer__mobile_hidden"><span><i class="fas fa-circle"></i></span></li>
                         <li><a class="footer__links_item" href="#">About us</a></li>
                     </ul>
                 </div>
@@ -446,46 +447,9 @@
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="js/jquery-input-mask-phone-number.min.js"></script>
+    <script src="js/custom_dom_events.js"></script>
     <script>
 
-        $('#contactForm').on('submit', () => {
-            // Выбор инпутов
-            const formInputList = $('#firstName, #lastName, #tel, #email, #message');
-
-            // Проверка свойства value у выбранных инпутов на заполненность
-            for(const [k, v] of Object.entries(formInputList)) {
-                let inputId = '#'+v.id;
-                if(v.value == '' || (inputId == '#tel' && v.value.includes('_'))) {
-                    if(!($(inputId).prev().hasClass('contact_us__error'))) {
-                        $(inputId).before($('<div class="contact_us__error">Please fill in the blank field</div>'))
-                    }
-                }
-                else {
-                    $(inputId).prev().remove()
-                }
-            }
-            
-            if($('.contact_us__error').length == 0) {
-                alert('Письмо отправлено успешно!')
-            }
-            event.preventDefault();
-        })
-
-        $("#tel").inputmask({"mask": "9 (999) 999-99-99"});
-        $("#email").inputmask({
-                mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
-                greedy: false,
-            onBeforePaste: function (pastedValue, opts) {
-                pastedValue = pastedValue.toLowerCase();
-                return pastedValue.replace("mailto:", "");
-            },
-            definitions: {
-                '*': {
-                    validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~\-]",
-                    casing: "lower"
-                }
-            }
-        });
     </script>
 </body>
 </html>
